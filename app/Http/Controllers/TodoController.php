@@ -89,14 +89,22 @@ class TodoController extends Controller
     }
 
     /** 
-     * ホーム画面表示
+     * ホーム画面へ
      * @return view
     */ 
-    public function showTodoHome() {
+    public function showHome() {
+        return view('home');
+    }
+
+    /** 
+     * メイン表示
+     * @return view
+    */ 
+    public function showMain() {
         $loginID = session()->get('loginID');
         //全てのタスクを取得
         $tasks = task::where('loginID',$loginID)->get();
-        return view('home',['tasks'=>$tasks]);
+        return view('main',['tasks'=>$tasks]);
     }
 
     /** 
@@ -192,5 +200,15 @@ class TodoController extends Controller
 
         //ログイン画面に飛ばす
         return redirect(route('loginPage'));
+    }
+
+    /** 
+     * メニュー画面を表示
+     * @return view
+    */ 
+    public function showMenyu() {
+        //ログインIDを送る
+        $loginID = session()->get('loginID');
+        return view('menyu',['loginID'=>$loginID]);
     }
 }

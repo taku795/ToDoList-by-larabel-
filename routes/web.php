@@ -29,8 +29,11 @@ Route::get('/todo/login/addUserPage', 'App\Http\Controllers\TodoController@showA
 //新規登録処理
 Route::post('/todo/login/addUser', 'App\Http\Controllers\TodoController@exeAddUser')->name('addUser');
 
+//追加フォームと一覧(main)を表示
+Route::get('/todo/main', 'App\Http\Controllers\TodoController@showMain')->name('main');
+
 //ホームを表示
-Route::get('/todo/home', 'App\Http\Controllers\TodoController@showTodoHome')->name('home');
+Route::get('/todo/home', 'App\Http\Controllers\TodoController@showHome')->name('home');
 
 //タスク登録処理
 Route::post('/todo/addTask', 'App\Http\Controllers\TodoController@exeAddTask')->name('addTask');
@@ -46,3 +49,6 @@ Route::post('/todo/{id}/delete', 'App\Http\Controllers\TodoController@exeDeleteT
 
 //ログアウト
 Route::get('/todo/logOut', 'App\Http\Controllers\TodoController@exelogOut')->name('logOut');
+
+//メニュー表示
+Route::get('/todo/Menyu', 'App\Http\Controllers\TodoController@showMenyu')->name('menyu');
