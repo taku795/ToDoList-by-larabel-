@@ -27,4 +27,11 @@
   </form>
   
   <a href="{{ route('addUserPage') }}">新規登録</a>
+
+  <script>
+    // 新規登録完了時
+    @if(session('msg-complete'))
+      alert("{{ session('msg-complete') }}");
+    @endif
+  </script>
 @endsection

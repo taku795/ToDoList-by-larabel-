@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\AlphaNumHalf;
 
 class loginRequest extends FormRequest
 {
@@ -24,8 +25,8 @@ class loginRequest extends FormRequest
     public function rules()
     {
         return [
-            'loginID'=> 'required | exists:users,loginID',
-            'loginPassword'=> 'required',
+            'loginID'=> ['required',new AlphaNumHalf,'exists:users,loginID'],
+            'loginPassword'=> ['required',new AlphaNumHalf],
         ];
     }
 }

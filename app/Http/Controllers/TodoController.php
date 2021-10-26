@@ -81,7 +81,8 @@ class TodoController extends Controller
             user::create($input);
             \DB::commit();
             //完了後ろグイン画面へ
-            return redirect('/todo');
+            \Session::flash('msg-complete','登録できました');
+            return redirect(route('loginPage'));
         } catch(\Throwable $e) {
             \DB::rollback();
             abort(500);
