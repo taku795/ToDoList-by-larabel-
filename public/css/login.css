@@ -48,4 +48,16 @@ footer {
 .login-form button:hover {
     background: #67c5ff;
     color: white;
-  }
+}
+.button-outer {
+    text-align: center;
+}
+.login-title p {
+    width: 70%;
+    border-bottom: solid 1px black;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: larger;
+    font-family: serif;
+}

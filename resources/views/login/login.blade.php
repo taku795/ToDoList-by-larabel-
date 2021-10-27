@@ -1,8 +1,10 @@
 @extends('login/layout')
 @section('title','ログインフォーム')
 @section('content')
-  <h2>ログインフォーム</h2>
   <form method="POST" action="{{ route('login') }}" class="login-form">
+    <div class="login-title">
+      <p>logi in</p>
+    </div>
   @csrf
     <input type="text" name="loginID" placeholder="ログインID">
     @if($errors->has('loginID'))
@@ -21,8 +23,10 @@
       {{ session('msg') }}
       </div>
     @endif
-    <button type="submit">ログイン</button>
-    <a href="{{ route('addUserPage') }}"><button type="button">新規登録</button></a>
+    <div class="button-outer">
+      <button type="submit">ログイン</button>
+      <a href="{{ route('addUserPage') }}"><button type="button">新規登録</button></a>
+    </div>
   </form>
   
 

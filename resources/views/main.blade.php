@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="/public/css/main.css">
   <section>
-    <h1>リスト追加</h1>
-    <p>やることを追加してください</p>
+    <div>
+      <h1>リスト追加</h1>
+      <p>やることを追加してください</p>
+    </div>
     <form method="POST" action="{{ route('addTask') }}" class="add-form">
       @csrf
       <input type="text" name="newTask">
@@ -10,7 +12,9 @@
   </section>
   
   <section>
-    <h1>リスト一覧</h1>
+    <div>
+      <h1>リスト一覧</h1>
+    </div>
     <table>
       @foreach($tasks as $task)
       <tr>

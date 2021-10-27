@@ -1,7 +1,6 @@
 @extends('login/layout')
 @section('title','新規登録画面')
 @section('content')
-  <h1>新規登録</h1>
   <form method="POST" action="{{ route('addUser') }}" class="login-form">
   @csrf
     <input type="text" name="loginID" placeholder="ログインID">
@@ -22,7 +21,9 @@
     {{ $errors->first('loginPasswordCheck') }}
     </div>
     @endif
-    <button type="submit">登録</button>
-    <a href="{{ route('loginPage') }}"><button type="button">キャンセル</button></a>
+    <div class="button-outer">
+      <button type="submit">登録</button>
+      <a href="{{ route('loginPage') }}"><button type="button">キャンセル</button></a>
+    </div>
   </form>
 @endsection

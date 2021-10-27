@@ -1,2 +1,4 @@
-<h1>メニュー</h1>
-ログインID：{{$loginID}}
+<link rel="stylesheet" href="/public/css/menyu.css">
+<div class="id">
+    <p>ログインID：{{$loginID}}</p>
+</div>
