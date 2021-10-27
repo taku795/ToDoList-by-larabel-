@@ -1,32 +1,30 @@
 @extends('login/layout')
 @section('title','ログインフォーム')
 @section('content')
-  <h1>ログインフォーム</h1>
-  <form method="POST" action="{{ route('login') }}">
+  <h2>ログインフォーム</h2>
+  <form method="POST" action="{{ route('login') }}" class="login-form">
   @csrf
-    ログインid
-    <input type="text" name="loginID">
+    <input type="text" name="loginID" placeholder="ログインID">
     @if($errors->has('loginID'))
-    <div>
-    {{ $errors->first('loginID') }}
-    </div>
+      <div>
+      {{ $errors->first('loginID') }}
+      </div>
     @endif
-    パスワード
-    <input type="text" name="loginPassword">
+    <input type="text" name="loginPassword" placeholder="パスワード">
     @if($errors->has('loginPassword'))
-    <div>
-    {{ $errors->first('loginPassword') }}
-    </div>
+      <div>
+      {{ $errors->first('loginPassword') }}
+      </div>
     @endif
     @if(session('msg'))
-    <div>
-    {{ session('msg') }}
-    </div>
+      <div>
+      {{ session('msg') }}
+      </div>
     @endif
     <button type="submit">ログイン</button>
+    <a href="{{ route('addUserPage') }}"><button type="button">新規登録</button></a>
   </form>
   
-  <a href="{{ route('addUserPage') }}">新規登録</a>
 
   <script>
     // 新規登録完了時

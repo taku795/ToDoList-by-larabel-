@@ -1,0 +1,56 @@
+.add-form {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+.add-form input[type=text] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 8px 0;
+	padding: 0.3em;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+	outline: none;
+}
+.add-form button {
+    margin-left: 10px;
+    background-color: white;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    
+}
+.add-form button:hover {
+    background: #67c5ff;
+    color: white;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table button {
+    background-color: white;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+}
+table button:hover {
+    background: #67c5ff;
+    color: white;
+}
+  
+table th,table td{
+    padding: 10px 0;
+    text-align: center;
+}
+  
+  

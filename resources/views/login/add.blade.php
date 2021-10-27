@@ -2,26 +2,21 @@
 @section('title','新規登録画面')
 @section('content')
   <h1>新規登録</h1>
-  <form method="POST" action="{{ route('addUser') }}">
+  <form method="POST" action="{{ route('addUser') }}" class="login-form">
   @csrf
-    ログインid
-    <input type="text" name="loginID">
+    <input type="text" name="loginID" placeholder="ログインID">
     @if($errors->has('loginID'))
     <div>
     {{ $errors->first('loginID') }}
     </div>
     @endif
-    
-    パスワード
-    <input type="text" name="loginPassword">
+    <input type="text" name="loginPassword" placeholder="パスワード">
     @if($errors->has('loginPassword'))
     <div>
     {{ $errors->first('loginPassword') }}
     </div>
     @endif
-
-    パスワード（確認）
-    <input type="text" name="loginPasswordCheck">
+    <input type="text" name="loginPasswordCheck" placeholder="パスワード（確認）">
     @if($errors->has('loginPasswordCheck'))
     <div>
     {{ $errors->first('loginPasswordCheck') }}

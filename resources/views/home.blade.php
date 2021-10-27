@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
   <title>ToDoリスト</title>
 </head>
 <body>
   <header>
-  <h1>Todoリスト</h1>
-  <button id='home'>ホーム</button>
-  <button id="menyu">メニュー</button></a>
-  <a href="{{ route('logOut') }}"><button>ログアウト</button></a>
+    <h1>Todoリスト</h1>
+    <nav>
+      <ul>
+        <li id='home'>ホーム</li>
+        <li id="menyu">メニュー</li>
+        <li><a href="{{ route('logOut') }}">ログアウト</a></li>
+      </ul>
+    </nav>
   </header>
 
   @if($errors->has('newTask'))
@@ -25,7 +28,7 @@
   </div>
 
   <footer>
-      <p>todoリスト</p>
+      <h1>TODO</h1>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

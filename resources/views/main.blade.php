@@ -1,10 +1,10 @@
-
+<link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <section>
     <h1>リスト追加</h1>
     <p>やることを追加してください</p>
-    <form method="POST" action="{{ route('addTask') }}">
+    <form method="POST" action="{{ route('addTask') }}" class="add-form">
       @csrf
-      <input type="content" name="newTask">
+      <input type="text" name="newTask">
       <button type="submit">追加する</button>
     </form>
   </section>
