@@ -16,6 +16,34 @@
 * アカウントを作成したことがある方  
 IDとパスワードを入力後ログインすることができます。
 
+2. ホーム画面
+
+![写真](/img/home.png)
+
+①ホーム  
+トップ画面です。
+
+②リスト追加    
+新しいタスクを追加することができます。
+
+③リスト一覧  
+リストの一覧が表示されます。
+
+④編集  
+同じ行にあるタスク内容を編集することができます。
+
+⑤消去  
+同じ行にあるタスクを消去します。
+
+⑥メニュー  
+メニュー画面を開きます。  
+ログインIDの確認、アカウントの消去が行えます。  
+（テストユーザーのアカウントは消去することができません）
+
+⑦ログアウト
+ログアウトします。
+
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
