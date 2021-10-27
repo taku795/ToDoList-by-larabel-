@@ -94,6 +94,9 @@ class TodoController extends Controller
      * @return view
     */ 
     public function showHome() {
+        if (session()->has('msg-update')) {
+            session()->keep('msg-update');
+        }
         return view('home');
     }
 
@@ -161,7 +164,7 @@ class TodoController extends Controller
             $task->fill(['task'=>$newTask]);
             $task->save();
             \DB::commit();
-            \Session::flash('msg','更新しました');
+            \Session::flash('msg-update','更新しました');
             return redirect(route('home'));
         } catch(\Throwable $e) {
             \DB::rollback();

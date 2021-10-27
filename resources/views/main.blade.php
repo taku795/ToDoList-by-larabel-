@@ -28,7 +28,7 @@
       <script>
         $(function() {
         $("#edit{{ $task['id'] }}").click(function() {
-          $('#main').load("http://localhost/todo/{{ $task['id'] }}/edit");
+          $('#main').load("/todo/{{ $task['id'] }}/edit");
         })
     })
       </script>
@@ -47,9 +47,9 @@
     }
   </script>
   <!-- 登録完了時の処理 -->
-  @if (session('msg'))
+  @if (session('msg-update'))
     <script>
-      alert("{{ session('msg') }}");
+      alert("{{ session('msg-update') }}");
     </script>
   @endif
 
