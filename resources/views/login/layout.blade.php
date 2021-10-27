@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+  <link rel="stylesheet" href="/public/css/login.css">
   <title>@yield('title')</title>
 </head>
 <body>

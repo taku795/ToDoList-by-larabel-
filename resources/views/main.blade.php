@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+<link rel="stylesheet" href="/public/css/main.css">
   <section>
     <h1>リスト追加</h1>
     <p>やることを追加してください</p>
@@ -19,7 +19,7 @@
           <button id="edit{{ $task['id'] }}">編集</button>          
         </td>
         <td>
-          <form onSubmit='return Check()' method='POST' action="http://localhost/todo/{{ $task['id'] }}/delete">
+          <form onSubmit='return Check()' method='POST' action="/public/todo/{{ $task['id'] }}/delete">
           @csrf
             <button>消去</button>
           </form>
@@ -28,7 +28,7 @@
       <script>
         $(function() {
         $("#edit{{ $task['id'] }}").click(function() {
-          $('#main').load("/todo/{{ $task['id'] }}/edit");
+          $('#main').load("/public/todo/{{ $task['id'] }}/edit");
         })
     })
       </script>

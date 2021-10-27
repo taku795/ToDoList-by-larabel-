@@ -2,7 +2,7 @@
 <html lang="jp">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+  <link rel="stylesheet" href="/public/css/home.css">
   <title>ToDoリスト</title>
 </head>
 <body>
