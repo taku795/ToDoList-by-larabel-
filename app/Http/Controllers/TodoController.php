@@ -178,15 +178,12 @@ class TodoController extends Controller
      * @return redirect
     */ 
     public function exeDeleteTask($id) {
-        //IDからタスクを取得
-        $task = task::find($id);
-
-        //消去
         \DB::beginTransaction();
         try {
             //消去処理
             task::where('id',$id)->delete();
             \DB::commit();
+            //ホーム画面へ
             return redirect(route('home'));
         } catch(\Throwable $e) {
             \DB::rollback();
@@ -199,9 +196,8 @@ class TodoController extends Controller
      * @return redirect
     */ 
     public function exelogOut() {
-        //セッションを消去して
+        //セッションを消去
         session()->flush();
-
         //ログイン画面に飛ばす
         return redirect(route('loginPage'));
     }
@@ -215,4 +211,29 @@ class TodoController extends Controller
         $loginID = session()->get('loginID');
         return view('menyu',['loginID'=>$loginID]);
     }
+
+    /** 
+     * アカウントを消去
+     * @return redirect
+    */ 
+    public function exeDeleteAccount() {
+        $loginID = session()->get('loginID');
+        \DB::beginTransaction();
+        try {
+            //消去処理
+            //タスクを消去
+            if (task::where('loginID',$loginID)->exists()) {
+                task::where('loginID',$loginID)->delete();
+            }
+            //アカウントを消去
+            user::where('loginID',$loginID)->delete();
+            \DB::commit();
+            //ログイン画面に飛ばす
+            return redirect(route('logOut'));
+        } catch(\Throwable $e) {
+            \DB::rollback();
+            abort(500);
+        }
+    }
+
 }

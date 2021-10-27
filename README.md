@@ -1,4 +1,20 @@
-# ToDoリスト
+# サイト名：ToDoリスト
+
+## 使い方
+1. ログイン/新規登録
+
+![写真](/img/login_page.png)
+
+* テストユーザーとしてログインしたい方  
+テストユーザー用のアカウントが用意されていますのでこちらをお使いください
+ログインID：test
+パスワード：test
+
+* アカウントをお持ちでない方  
+新規登録ボタンを押してIDとパスワードを登録後ログインしてください。
+
+* アカウントを作成したことがある方  
+IDとパスワードを入力後ログインすることができます。
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>

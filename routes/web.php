@@ -44,7 +44,7 @@ Route::get('/todo/{id}/edit', 'App\Http\Controllers\TodoController@showEditPage'
 //タスク更新処理
 Route::post('/todo/{id}/update', 'App\Http\Controllers\TodoController@exeUpdateTask')->name('updateTask');
 
-//消去処理
+//タスク消去処理
 Route::post('/todo/{id}/delete', 'App\Http\Controllers\TodoController@exeDeleteTask')->name('deleteTask');
 
 //ログアウト
@@ -52,3 +52,6 @@ Route::get('/todo/logOut', 'App\Http\Controllers\TodoController@exelogOut')->nam
 
 //メニュー表示
 Route::get('/todo/Menyu', 'App\Http\Controllers\TodoController@showMenyu')->name('menyu');
+
+//アカウント消去処理
+Route::post('/todo/account-delete', 'App\Http\Controllers\TodoController@exeDeleteAccount')->name('deleteAccount');

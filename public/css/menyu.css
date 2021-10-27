@@ -9,3 +9,17 @@
 .id p {
     font-size: x-large;
 }
+.id button {
+    margin-left: 10px;
+    background-color: white;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    
+}
+.id button:hover {
+    background: #67c5ff;
+    color: white;
+}
